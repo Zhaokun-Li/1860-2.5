@@ -10,7 +10,7 @@
 // stack, so that, from the point of view of the callee, the
 // result is at the top of the stack.
 //
-function Sys.xor 0
+function Sys.xor 2
 push argument 0
 push argument 1
 or
@@ -89,11 +89,11 @@ push constant 0
 pop local 0
 push constant 
 pop local 1
-label LO0P
+label LOOP
 push local 1
 push constant 14
 eq
-if-gotO END
+if-goto END
 push constant 1
 push local 1
 call Sys.shiftLeft 2
@@ -103,8 +103,11 @@ push local 1
 add
 pop local 1
 push local 2
-push argument 2and
-push constant 0eqif-goto LOOP
+push argument 2
+and
+push constant 0
+eq
+if-goto LOOP
 push local 0
 push constant 1
 call Sys.xor 2
