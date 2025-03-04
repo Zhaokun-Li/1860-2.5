@@ -15,7 +15,7 @@ push argument 0
 push argument 1
 or
 pop local 0
-push argument 
+push argument 0
 push argument 1
 and
 not
@@ -87,7 +87,7 @@ return
 function Sys.computeParity 3
 push constant 0
 pop local 0
-push constant 
+push constant 0
 pop local 1
 label LOOP
 push local 1
